@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignUp for my blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="abc.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutme.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog_signup.html">Sign Up</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<h1 style="text-align: center; margin-top: 5px; padding-left: 20px; font-family: 'Monofett', cursive; font-size: 100px;">SignUp</h1>
+<h1 style="text-align: center; margin-top: 10px; padding-left: 20px; font-family: 'Pinyon Script', cursive; font-size: 100px; color:grey; text-shadow: 2px 2px 4px #000000;
+ ">Blogs by Nikhil</h1>
+<div class="row">
+    <div class="column">
+        <div style="width:500px; height: 300px; margin-top: 20px; background-color: lightgreen; border-radius: 40px; margin-left: 100px; float: left;">
+            <h2 style="padding-top: 30px; margin-left: 10px; margin-right: 10px; text-align: center; font-family: 'Patrick Hand', cursive; font-size: 35px; font-weight: 550; line-height: 180%;">
+                I
+                usually write about intuiging questions ranging from science, mathematics, religion and politics. I am
+                also a
+                poet and good story-teller.</h2>
+        </div>
+    </div>
+    <div class="column"
+         style="border-right-style: solid;border-color: white; width:500px; height: 300px; margin-top: 30px; background-color: lightgreen; border-radius: 40px; margin-left: 20px; float: right; ">
+        <form class="login" action="subscribe.php" method="POST" id="logform"
+              style="margin-top: 0px;margin-left: 0px;transition: 0.3s;width: 100%; color: #333333;text-align: center;font-size: 16px; margin-top: 50px">
+            <input type="text" name="name" placeholder="Name"><br>
+            <input type="email" name="email" placeholder="Email" id="emailid"><br>
+            <input type="button" value="Login" onclick="validate()">
+        </form>
+        <style>
+            .login {
+                padding: 2px 16px;
+            }
+
+            .login input[type=text] {
+                width: 100%;
+                padding: 12px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .login input[type=email] {
+                width: 100%;
+                padding: 12px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .login input[type=submit] {
+                width: 100%;
+                background-color: grey;
+                color: black;
+                padding: 14px 20px;
+                margin: 12px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        </style>
+    </div>
+</div>
+<style>
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+</style>
+
+<script>
+
+
+function validate()
+{
+var mail=document.getElementById("emailid").value;
+var dotcom=".com";
+var at="@";
+
+if(mail.indexOf(dotcom)==-1)
+    {alert("The email is incorrect!!! Please try again");return;}
+
+
+if(mail.indexOf(at)==-1)
+    {alert("The email is incorrect!!! Please try again");return;}
+
+
+
+var lform=document.getElementById("logform");
+lform.submit();
+alert("Done");
+
+}
+
+</script>
+
+</body>
+</html>
